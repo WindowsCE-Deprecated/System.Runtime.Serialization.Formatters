@@ -1,0 +1,98 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19FB41EC-C4F1-4066-B696-421C039B512C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Runtime.Serialization</RootNamespace>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>System.Runtime.Serialization.Formatters</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).XML</DocumentationFile>
+    <Features>CLASSIC</Features>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG;$(PlatformFamilyName);$(Features)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;$(PlatformFamilyName);$(Features)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)packages\System.Runtime.Serialization.Primitives.WindowsCE\lib\net35-cf\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\IDeserializationCallback.cs">
+      <Link>IDeserializationCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\IFormatterConverter.cs">
+      <Link>IFormatterConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\ISerializable.cs">
+      <Link>ISerializable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\Mock.cs">
+      <Link>Mock.cs</Link>
+    </Compile>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\SerializationEntry.cs">
+      <Link>SerializationEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\SerializationInfo.cs">
+      <Link>SerializationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\System.Runtime.Serialization.Formatters.WindowsCE\SerializationInfoEnumerator.cs">
+      <Link>SerializationInfoEnumerator.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

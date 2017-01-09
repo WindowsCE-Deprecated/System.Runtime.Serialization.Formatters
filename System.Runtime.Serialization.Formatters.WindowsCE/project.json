@@ -1,0 +1,30 @@
+﻿{
+  "title": "System.Runtime.Serialization.Formatters.WindowsCE",
+  "version": "1.0.0-*",
+  "language": "en-US",
+  "authors": [ "Microsoft", "Fabricio Godoy" ],
+  "packOptions": {
+    "summary": "Provides common types for libraries that support runtime serialization",
+    "owners": [ "skarllot", "fgodoy-verion" ],
+    "tags": [ "serialization", "net35-cf", "windowsce", "wince" ],
+    "projectUrl": "https://github.com/WindowsCE/System.Runtime.Serialization.Formatters",
+    "licenseUrl": "https://www.microsoft.com/net/dotnet_library_license.htm",
+    "requireLicenseAcceptance": true,
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/WindowsCE/System.Runtime.Serialization.Formatters.git"
+    }
+  },
+
+  "buildOptions": {
+    "outputName": "System.Runtime.Serialization.Formatters"
+  },
+
+  "frameworks": {
+    "net35-cf": {
+      "dependencies": {
+        "System.Runtime.Serialization.Primitives.WindowsCE": "1.0.0"
+      }
+    }
+  }
+}

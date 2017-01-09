@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>System.Runtime.Serialization.Formatters.WindowsCE</id>
+    <version>$version$</version>
+    <title>System.Runtime.Serialization.Formatters.WindowsCE</title>
+    <authors>Microsoft,Fabricio Godoy</authors>
+    <owners>skarllot,fgodoy-verion</owners>
+    <licenseUrl>https://www.microsoft.com/net/dotnet_library_license.htm</licenseUrl>
+    <projectUrl>https://github.com/WindowsCE/System.Runtime.Serialization.Formatters</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Provides common types for libraries that support runtime serialization</summary>
+    <description>Provides common types for libraries that support runtime serialization.
+
+Commonly Used Types:
+System.SerializableAttribute
+System.Runtime.Serialization.ISerializable
+ 
+When using NuGet 3.x this package requires at least version 3.4.</description>
+    <language>en-US</language>
+    <tags>serialization,net35-cf,windowsce,wince</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5-CompactFramework">
+        <dependency id="System.Runtime.Serialization.Primitives.WindowsCE" version="[1.0.0, )" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

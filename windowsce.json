@@ -1,0 +1,27 @@
+{
+  "name": "SerializationFormatters",
+  "projects": [
+    {
+      "name": "System.Runtime.Serialization.Formatters",
+      "guid": "{19FB41EC-C4F1-4066-B696-421C039B512C}",
+      "rootNamespace": "System.Runtime.Serialization",
+      "assemblyName": "System.Runtime.Serialization.Formatters",
+      "basePath": "System.Runtime.Serialization.Formatters.WindowsCE",
+      "features": [
+        "CLASSIC"
+      ],
+      "frameworkAssemblies": [
+        "mscorlib",
+        "System",
+        "System.Core"
+      ],
+      "dependencies": [
+        {
+          "id": "System.Runtime.Serialization.Primitives.WindowsCE",
+          "version": "1.0",
+          "assemblyName": "System.Runtime.Serialization.Primitives"
+        }
+      ]
+    }
+  ]
+}
