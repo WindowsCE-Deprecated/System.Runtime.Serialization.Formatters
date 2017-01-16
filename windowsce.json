@@ -18,7 +18,7 @@
       "dependencies": [
         {
           "id": "System.Runtime.Serialization.Primitives.WindowsCE",
-          "version": "1.0",
+          "version": "1.0.1",
           "assemblyName": "System.Runtime.Serialization.Primitives"
         }
       ]

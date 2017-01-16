@@ -3,12 +3,13 @@
   <metadata>
     <id>System.Runtime.Serialization.Formatters.WindowsCE</id>
     <version>$version$</version>
-    <title>System.Runtime.Serialization.Formatters.WindowsCE</title>
-    <authors>Microsoft,Fabricio Godoy</authors>
+    <title>System.Runtime.Serialization.Formatters for WindowsCE</title>
+    <authors>Fabricio Godoy</authors>
     <owners>skarllot,fgodoy-verion</owners>
-    <licenseUrl>https://www.microsoft.com/net/dotnet_library_license.htm</licenseUrl>
+    <licenseUrl>https://github.com/WindowsCE/System.Runtime.Serialization.Formatters/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/WindowsCE/System.Runtime.Serialization.Formatters</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <copyright>Copyright © Fabrício Godoy</copyright>
     <summary>Provides common types for libraries that support runtime serialization</summary>
     <description>Provides common types for libraries that support runtime serialization.
 
@@ -16,12 +17,12 @@ Commonly Used Types:
 System.SerializableAttribute
 System.Runtime.Serialization.ISerializable
  
-When using NuGet 3.x this package requires at least version 3.4.</description>
+Mimics the package System.Runtime.Serialization.Formatters.</description>
     <language>en-US</language>
     <tags>serialization,net35-cf,windowsce,wince</tags>
     <dependencies>
       <group targetFramework=".NETFramework3.5-CompactFramework">
-        <dependency id="System.Runtime.Serialization.Primitives.WindowsCE" version="[1.0.0, )" />
+        <dependency id="System.Runtime.Serialization.Primitives.WindowsCE" version="[1.0.1, )" />
       </group>
     </dependencies>
   </metadata>

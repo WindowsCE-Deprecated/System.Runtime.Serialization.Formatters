@@ -1,6 +1,6 @@
 ﻿{
   "title": "System.Runtime.Serialization.Formatters.WindowsCE",
-  "version": "1.0.0-*",
+  "version": "1.0.1-*",
   "language": "en-US",
   "authors": [ "Microsoft", "Fabricio Godoy" ],
   "packOptions": {
@@ -17,13 +17,17 @@
   },
 
   "buildOptions": {
-    "outputName": "System.Runtime.Serialization.Formatters"
+    "keyFile": "../tools/keypair.snk",
+    "nowarn": [ "CS1591" ],
+    "outputName": "System.Runtime.Serialization.Formatters",
+    "xmlDoc": true,
+    "warningsAsErrors": true
   },
 
   "frameworks": {
     "net35-cf": {
       "dependencies": {
-        "System.Runtime.Serialization.Primitives.WindowsCE": "1.0.0"
+        "System.Runtime.Serialization.Primitives.WindowsCE": "1.0.1"
       }
     }
   }
