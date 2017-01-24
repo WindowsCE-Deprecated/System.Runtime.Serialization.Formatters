@@ -15,12 +15,14 @@
 ============================================================*/
 namespace System.Runtime.Serialization
 {
+    using InteropServices;
     using System;
 
     /// <summary>
     /// Provides the connection between an instance of <see cref="SerializationInfo"/>
     /// and the formatter-provided class best suited to parse the data inside the <see cref="SerializationInfo"/>.
     /// </summary>
+    [CLSCompliant(false), ComVisible(true)]
     public interface IFormatterConverter
     {
         /// <summary>

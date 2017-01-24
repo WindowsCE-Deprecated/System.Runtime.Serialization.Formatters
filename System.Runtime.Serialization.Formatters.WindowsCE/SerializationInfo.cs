@@ -15,10 +15,12 @@ namespace System.Runtime.Serialization
 {
     using System;
     using Collections.Generic;
+    using InteropServices;
 
     /// <summary>
     /// Stores all the data needed to serialize or deserialize an object.
     /// </summary>
+    [ComVisible(true)]
     public sealed class SerializationInfo
     {
         private const int defaultSize = 4;
@@ -45,6 +47,7 @@ namespace System.Runtime.Serialization
         /// <exception cref="ArgumentNullException">
         /// <paramref name="type" /> or <paramref name="converter" /> is null.
         /// </exception>
+        [CLSCompliant(false)]
         public SerializationInfo(Type type, IFormatterConverter converter)
             : this(type, converter, false)
         { }
@@ -59,6 +62,7 @@ namespace System.Runtime.Serialization
         /// <paramref name="type" /> or <paramref name="converter" /> is null.
         /// </exception>
         /// <exception cref="NotSupportedException"><paramref name="requireSameTokenInPartialTrust"/> is true.</exception>
+        [CLSCompliant(false)]
         public SerializationInfo(Type type, IFormatterConverter converter, bool requireSameTokenInPartialTrust)
         {
             if (type == null)
@@ -271,7 +275,7 @@ namespace System.Runtime.Serialization
             AddValue(name, (object)value, typeof(char));
         }
 
-
+        [CLSCompliant(false)]
         public void AddValue(string name, sbyte value)
         {
             AddValue(name, (object)value, typeof(sbyte));
@@ -287,6 +291,7 @@ namespace System.Runtime.Serialization
             AddValue(name, (object)value, typeof(short));
         }
 
+        [CLSCompliant(false)]
         public void AddValue(string name, ushort value)
         {
             AddValue(name, (object)value, typeof(ushort));
@@ -294,9 +299,10 @@ namespace System.Runtime.Serialization
 
         public void AddValue(String name, int value)
         {
-            AddValue(name, (Object)value, typeof(int));
+            AddValue(name, (object)value, typeof(int));
         }
 
+        [CLSCompliant(false)]
         public void AddValue(string name, uint value)
         {
             AddValue(name, (object)value, typeof(uint));
@@ -307,6 +313,7 @@ namespace System.Runtime.Serialization
             AddValue(name, (object)value, typeof(long));
         }
 
+        [CLSCompliant(false)]
         public void AddValue(string name, ulong value)
         {
             AddValue(name, (object)value, typeof(ulong));
@@ -445,11 +452,7 @@ namespace System.Runtime.Serialization
 
             value = GetElement(name, out foundType);
             if (object.ReferenceEquals(foundType, type) ||
-#if !PCL
                 type.IsAssignableFrom(foundType) ||
-#else
-                type.GetTypeInfo().IsAssignableFrom(foundType.GetTypeInfo()) ||
-#endif
                 value == null
                 )
             {
@@ -469,11 +472,7 @@ namespace System.Runtime.Serialization
                 return null;
 
             if (object.ReferenceEquals(foundType, type) ||
-#if !PCL
                 type.IsAssignableFrom(foundType) ||
-#else
-                type.GetTypeInfo().IsAssignableFrom(foundType.GetTypeInfo()) ||
-#endif
                 value == null)
             {
                 return value;
@@ -506,6 +505,7 @@ namespace System.Runtime.Serialization
             return m_converter.ToChar(value);
         }
 
+        [CLSCompliant(false)]
         public sbyte GetSByte(string name)
         {
             Type foundType;
@@ -542,6 +542,7 @@ namespace System.Runtime.Serialization
             return m_converter.ToInt16(value);
         }
 
+        [CLSCompliant(false)]
         public ushort GetUInt16(string name)
         {
             Type foundType;
@@ -566,6 +567,7 @@ namespace System.Runtime.Serialization
             return m_converter.ToInt32(value);
         }
 
+        [CLSCompliant(false)]
         public uint GetUInt32(string name)
         {
             Type foundType;
@@ -590,6 +592,7 @@ namespace System.Runtime.Serialization
             return m_converter.ToInt64(value);
         }
 
+        [CLSCompliant(false)]
         public ulong GetUInt64(string name)
         {
             Type foundType;

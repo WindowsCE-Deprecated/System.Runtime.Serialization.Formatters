@@ -22,7 +22,7 @@ Mimics the package System.Runtime.Serialization.Formatters.</description>
     <tags>serialization,net35-cf,windowsce,wince</tags>
     <dependencies>
       <group targetFramework=".NETFramework3.5-CompactFramework">
-        <dependency id="System.Runtime.Serialization.Primitives.WindowsCE" version="[1.0.1, )" />
+        <dependency id="System.Runtime.Serialization.Primitives.WindowsCE" version="[1.0.2, )" />
       </group>
     </dependencies>
   </metadata>
