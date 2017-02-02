@@ -2,7 +2,7 @@
   "title": "System.Runtime.Serialization.Formatters.WindowsCE",
   "version": "1.0.0-*",
   "language": "en-US",
-  "authors": [ "Microsoft", "Fabricio Godoy" ],
+  "authors": [ "Fabricio Godoy" ],
   "packOptions": {
     "summary": "Provides common types for libraries that support runtime serialization",
     "owners": [ "skarllot", "fgodoy-verion" ],
